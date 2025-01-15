@@ -1,0 +1,24 @@
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between border-bottom">
+  <div class="col-md-3 mb-2 mb-md-0">
+      <a href="javascript:void(0);" class="d-inline-flex link-body-emphasis text-decoration-none">
+          <img class="logo" src="../../assets/Ssi Logo.png" height="100px" alt="Sandip Science Logo"/>
+      </a>
+  </div>
+
+  <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a routerLink="/home" routerLinkActive="active" class="px-2 btn btn-warning custom-tab m-1">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" class="px-2 btn btn-warning custom-tab m-1">About</a></li>
+      <li><a routerLink="/features" routerLinkActive="active" class="px-2 btn btn-warning custom-tab m-1">Features</a></li>
+      <li><a routerLink="/results" routerLinkActive="active" class="px-2 btn btn-warning custom-tab m-1">Results</a></li>
+      <li><a routerLink="/reviews" routerLinkActive="active" class="px-2 btn btn-warning custom-tab m-1">Reviews</a></li>
+  </ul>
+
+  <div class="col-md-3">
+      <button type="button" class="btn custom-tab appointment-btn">
+          <a routerLink="/appointment"  class="text-decoration-none text-white">Book Appointment</a>
+      </button>
+  </div>
+</header>
+<body>
+<router-outlet></router-outlet>
+</body>

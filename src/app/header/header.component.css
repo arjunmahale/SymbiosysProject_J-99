@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li, a, button{
+    text-decoration:none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 16px;
+    color:#edf0f1;   
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: rgb(232, 253, 0);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.logo{
+    cursor:pointer;
+}
+
+.logo-background{
+    align-items: center;
+    background-color: rgb(232, 253, 0);
+    
+}
+
+.nav_links{
+    list-style:none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav li a:hover {
+    border-radius: 10%;
+    border-color: #000;
+    transform: scale(1.1);
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border:none;
+    border-radius: 50px;
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+    
+
+}
+
+button:hover{
+    background-color: rgba(0,136,169,0.5);
+
+}
+
+header{
+    border: 2px solid orange;
+    width:100%;
+    margin:0;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Full width to reveal all text */
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    font-size: 2.5em;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+
+.custom-tab {
+    color: black; /* White text */
+    margin: 0 20px; /* Adds spacing between buttons */
+    font-weight: 400; /* Makes text bold */
+    font-style: italic; /* Makes text italic */
+    padding: 10px 20px; /* Adjust button size by increasing padding */
+    border-radius: 5px; /* Optional: round button edges */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    height: 40px;
+    width:100px;
+}
+
+.custom-tab.active {
+    background-color: white; /* White background when active */
+    color: black; /* Black text when active */
+}
+
+.custom-tab:hover {
+    background-color:yellow; /* Dark gray background on hover */
+    color:red; /* Keep text white on hover */
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+.appointment-btn{
+    height:50px;
+    width:200px;
+    color:white;
+    background-color: black;
+}
+.appointment-btn:hover{
+    height:50px;
+    width:200px;
+    background-color: rgb(3, 217, 255);
+    color:black;
+}
+.hero h1{
+    font-size: 40px;
+    color:rgb(1, 1, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 3px 3px rgb(255, 251, 0);
+}
+.hero {
+    font-size: 30px;
+    color:rgb(1, 1, 0);
+    font-family: cursive;
+    text-shadow: 2px 2px rgb(208, 208, 179);
+}
+.carousel-item img {
+    border:3px solid yellow;
+    border-radius: 10px;
+    height: 600px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures images are cropped if necessary */
+    width: 100%; /* Maintains full width */
+  }
+  @media (max-width: 768px) {
+    .carousel-item img {
+        height: 400px; /* Adjust height as needed */ 
+      }
+  }
+
+  @media (min-width:800px) {
+    .typing {
+           
+        font-size: 30px; /* Increase font size for better visibility */
+        display: inline-block; /* Keeps the text in one line */
+        width: 0; /* Start with width 0 */
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide the overflowing text */
+        animation: typing 8s steps(400) 1s forwards, blink 0.75s step-end infinite; /* Typing and cursor blinking */
+    }
+    
+  }
+
+  .corousalsize{
+    height: 100%;
+    width:100%;
+  }
+ 
