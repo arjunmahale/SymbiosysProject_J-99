@@ -1,0 +1,39 @@
+footer {
+    
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.5;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+footer .main-branch {
+    font-size: 20px;
+    font-weight: bold;
+}
+footer .branch-address {
+    font-size: 14px;
+    margin-top: 2px;
+}
+footer .contact-numbers {
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 5px 0;
+
+}
+footer .social-media {
+ display: flex;
+    justify-content: center;
+  flex-wrap: wrap;
+    margin-top: 10px;
+     margin-left: auto;
+    font-size: 14px;
+                       }
+ footer .social-media a {
+    margin-right: 40px;
+    margin-left:5px;
+    text-decoration: none;
+}
