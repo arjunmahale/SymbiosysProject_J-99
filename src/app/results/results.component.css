@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Full width to reveal all text */
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+.hero h1{
+    font-size: 40px;
+    color:rgb(1, 1, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 3px 3px rgb(255, 251, 0);
+}
+.hero {
+    font-size: 30px;
+    color:rgb(1, 1, 0);
+    font-family: cursive;
+    text-shadow: 2px 2px rgb(208, 208, 179);
+}
+.carousel-item img {
+    border:3px solid yellow;
+    border-radius: 10px;
+    height: 600px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures images are cropped if necessary */
+    width: 100%; /* Maintains full width */
+  }
+  @media (max-width: 768px) {
+    .carousel-item img {
+        height: 400px; /* Adjust height as needed */ 
+      }
+  }
+
+  @media (min-width:800px) {
+    .typing {
+           
+        font-size: 30px; /* Increase font size for better visibility */
+        display: inline-block; /* Keeps the text in one line */
+        width: 0; /* Start with width 0 */
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide the overflowing text */
+        animation: typing 8s steps(400) 1s forwards, blink 0.75s step-end infinite; /* Typing and cursor blinking */
+    }
+    
+  }
+
+  .corousalsize{
+    height: 100%;
+    width:100%;
+  }
