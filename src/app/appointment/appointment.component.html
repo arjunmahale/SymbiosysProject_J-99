@@ -1,0 +1,223 @@
+<head>
+  <title>Book-Appointmnet</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.buttons{
+    margin: auto;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Full width to reveal all text */
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+
+
+
+.hero {
+    font-size: 10px;
+    color:rgb(1, 1, 0);
+    font-family: cursive;
+    text-shadow: 2px 2px rgb(208, 208, 179);
+}
+.carousel-item img {
+    border:3px solid yellow;
+    border-radius: 10px;
+    height: 600px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures images are cropped if necessary */
+    width: 100%; /* Maintains full width */
+  }
+
+  label{
+    font-weight: 600;
+  }
+  @media (max-width: 768px) {
+    .carousel-item img {
+        height: 400px; /* Adjust height as needed */ 
+      }
+  }
+
+  @media (min-width:800px) {
+    .typing {
+           
+        font-size: 30px; /* Increase font size for better visibility */
+        display: inline-block; /* Keeps the text in one line */
+        width: 0; /* Start with width 0 */
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide the overflowing text */
+        animation: typing 8s steps(400) 1s forwards, blink 0.75s step-end infinite; /* Typing and cursor blinking */
+    }
+    
+  }
+  .form-label{
+    font-size: 20px;
+  }
+
+  .corousalsize{
+    height: 100%;
+    width:100%;
+  }
+
+  .carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent !important; /* Ensure the buttons don't have a background */
+  border: none !important; /* Remove any border if present */
+}
+  </style>
+  </head>
+
+  <body>
+<div class="bg-body-primary hero">
+    <div class="body-secondary text-center ">
+      <div class="mt-3">
+        <h1 class="typing"><b><i>Book An Appointment</i></b></h1><br>
+      </div>
+    </div>      
+  </div>
+  <div class="container my-3">
+    <div class="row">
+      <!-- Form Section -->
+      <div class="col-lg-6 col-md-8 mx-auto mb-4 mb-lg-0">
+        <div class="card">
+          <div class="card-body">
+            
+            <form class="px-2">
+              <div class="g-3">
+                <!-- Name Fields -->
+                <div class="col my-0">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                </div>
+                <div class="col my-0">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                </div>
+              </div>
+
+              <!-- Phone and Email Fields -->
+              <div class="g-3">
+                <div class="col ">
+                  <label for="phone" class="form-label">Phone Number (Self)</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="(000) 000-0000">
+                </div>
+                <div class="col ">
+                  <label for="phone-parent" class="form-label">Phone Number (Parent)</label>
+                  <input type="tel" class="form-control" id="phone-parent" placeholder="(000) 000-0000" required>
+                </div>
+                <div class="col ">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email" placeholder="example@example.com" required>
+                </div>
+              </div>
+              
+              <!-- Batch Selection-->
+              <div class="mb-3">
+                <label for="batch" class="form-label">Select Batch</label>
+                <select id="batch" class="form-select">
+                  <option value="01:00" selected>College Tie-up</option>
+                  <option value="09:00">11th PCM</option> 
+                  <option value="10:00">11th PCB</option>    
+                  <option value="10:00">11th PCMB</option>    
+                  <option value="11:00">12th PCM</option>
+                  <option value="12:00">12th PCB</option>
+                  <option value="12:00">12th PCMB</option>
+                  <option value="02:00">Crash-Course (MHT-CET,JEE)</option>
+                </select>
+              </div>
+              
+              <!-- Date and Time Selection -->
+              <div class="mb-3">
+                <label for="appointment-date" class="form-label">Date</label>
+                <input 
+                  type="date" 
+                  id="appointment-date" 
+                  class="form-control" 
+                  min="{{ today }}" >
+              </div>
+              <div class="mb-3">
+                <label for="time-slot" class="form-label">Time Slot</label>
+                <select id="time-slot" class="form-select">
+                  <option value="" selected disabled>Select a time</option>
+                  <option value="09:00">09:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="01:00">01:00 PM</option>
+                  <option value="02:00">02:00 PM</option>
+                  <option value="03:00">03:00 PM</option>
+                  <option value="04:00">04:00 PM</option>
+                  <option value="05:00">05:00 PM</option>
+                </select>
+              </div>
+
+              <!-- Comments -->
+              <div class="mb-3">
+                <label for="comments" class="form-label">Comments</label>
+                <textarea id="comments" class="form-control" rows="4" placeholder="Add any comments here..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="text-center">
+                <button type="reset" class="btn btn-secondary mx-1">Reset</button>
+                <button type="submit" class="btn btn-primary mx-1">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Section
+      <div class="col-lg-6 d-none d-lg-block ">
+        <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner ">
+            <div class="carousel-item active ">
+              <img src="../assets/Prospectus Photos/page1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../assets/Prospectus Photos/page2.png" class="d-block w-100" alt="...">
+            </div>
+            
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>-->      
+    </div>
+  </div>
+</body>
