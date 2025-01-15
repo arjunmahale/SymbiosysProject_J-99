@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hero h1{
+    font-size: 40px;
+    color:rgb(1, 1, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 3px 3px rgb(255, 251, 0);
+}
+.hero {
+    font-size: 30px;
+    color:rgb(1, 1, 0);
+    font-family: cursive;
+    text-shadow: 2px 2px rgb(208, 208, 179);
+}
+@media (min-width:800px) {
+    .typing {
+           
+        font-size: 30px; /* Increase font size for better visibility */
+        display: inline-block; /* Keeps the text in one line */
+        width: 0; /* Start with width 0 */
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide the overflowing text */
+        animation: typing 8s steps(400) 1s forwards, blink 0.75s step-end infinite; /* Typing and cursor blinking */
+    }
+}
+p{
+    font-size: 1.3rem;
+}
+ 
